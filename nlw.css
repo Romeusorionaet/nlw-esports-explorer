@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(img/fundo.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 100% auto;
+    background-color: #121214;
+}
+
+body * {
+    font-family: 'inter', sans-serif;
+    line-height: 160%;
+}
+
+header {
+    text-align: center;
+    height: calc(210px + 32px);
+}
+
+header div {
+    background-image: linear-gradient(90deg, rgb(124, 10, 255) 0%, rgb(34, 152, 199) 50%, rgb(54, 126, 44) 100%);
+    width: 210px;
+    border-radius: 50%;
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    padding: 4px;
+    transition: transform .3s;
+}
+
+header div img {
+    border-radius: 50%;
+    width: 100%;
+}
+
+header div:hover {
+    transform: scale(1.1);
+}
+
+main {
+    max-width: 580px;
+    width: 90%;
+    margin: 32px auto;
+    margin-top: 24px;
+    display: grid;
+    gap: 24px;
+}
+
+section {
+    color: white;
+    background-image: linear-gradient(90deg, rgb(124, 10, 255) 0%, rgb(34, 152, 199) 50%, rgb(54, 126, 44) 100%);
+    padding-top: 4px;
+    border-radius: 10px;
+}
+section .movie-list img {
+    width: 230px;
+    height: 200px;
+}
+
+section div {
+    background-color: #2a2634;
+    padding: 24px 32px;
+    border-radius: 8px;
+}
+
+section h2 {
+    letter-spacing: -0.20px;
+}
+
+section p {
+    letter-spacing: -0.18px;
+    color: #A1A1AA;
+}
+
+section ul {
+    margin-top: 24px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+section ul li {
+    transition: transform .3s;
+}
+
+section ul li:hover {
+    transform: scale(1.1);
+}
+
+.games-list img {
+    border-radius: 8px;
+}
+
+.perfil-games img {
+
+}
+
+/*=animation=*/
+
+header div {
+    animation: fromTop .7s .3s backwards;
+}
+
+@keyframes fromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-50px)
+    }
+
+    to {
+        opacity: 1;
+        tranform: translateY(0)
+    }
+}
+
+@keyframes fromRight {
+    from {
+        opacity: 0;
+        transform: translateX(-50px)
+    }
+
+    to {
+        opacity: 1;
+        tranform: translateX(0)
+    }
+}
+
+section .movie-list {
+    animation: fromRight .7s .2s backwards;
+}
+
+section .serie-list {
+    animation: fromRight .7s .4s backwards;
+}
+
+section .perfil-social {
+    animation: fromRight .7s .6s backwards;
+}
+
+@keyframes fromBottom {
+    from {
+        transfrom: translateX(0)
+    }
+
+    to {
+        transform: translateY(-10px)
+    }
+}
+
+main section {
+    animation: fromBottom .7s .3s backwards;
+}
