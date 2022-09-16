@@ -60,13 +60,13 @@ section {
 section .movie-list img {
     width: 230px;
     height: 200px;
-    border: solid rgb(19, 207, 75) 1px;
+    border: solid rgb(252, 12, 240) 1px;
 }
 
 section .serie-list img {
     width: 230px;
     height: 200px;
-    border: solid rgb(19, 207, 75) 1px;
+    border: solid rgb(252, 12, 240) 1px;
 }
 
 section div {
