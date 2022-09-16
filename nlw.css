@@ -5,11 +5,11 @@
 }
 
 body {
-    background-image: url(img/fundo.jpg);
     background-repeat: no-repeat;
     background-position: top center;
-    background-size: 100% auto;
-    background-color: #121214;
+    background-size: 100% 100%;
+    /*background-image: linear-gradient(to bottom, rgb(41, 66, 99), rgb(11, 32, 63), black);*/
+    background-image: url("https://i.pinimg.com/736x/13/c4/40/13c4400ed12412b9a80c43025a17ec8d.jpg");
 }
 
 body * {
@@ -43,8 +43,7 @@ header div:hover {
 }
 
 main {
-    max-width: 580px;
-    width: 90%;
+    width: 540px;
     margin: 32px auto;
     margin-top: 24px;
     display: grid;
@@ -57,9 +56,17 @@ section {
     padding-top: 4px;
     border-radius: 10px;
 }
+
 section .movie-list img {
     width: 230px;
     height: 200px;
+    border: solid rgb(19, 207, 75) 1px;
+}
+
+section .serie-list img {
+    width: 230px;
+    height: 200px;
+    border: solid rgb(19, 207, 75) 1px;
 }
 
 section div {
@@ -85,20 +92,16 @@ section ul {
     gap: 16px;
 }
 
+section ul img {
+    border-radius: 8px;
+}
+
 section ul li {
     transition: transform .3s;
 }
 
 section ul li:hover {
     transform: scale(1.1);
-}
-
-.games-list img {
-    border-radius: 8px;
-}
-
-.perfil-games img {
-
 }
 
 /*=animation=*/
@@ -132,7 +135,7 @@ header div {
 }
 
 section .movie-list {
-    animation: fromRight .7s .2s backwards;
+    animation: fromRight .7s .3s backwards;
 }
 
 section .serie-list {
@@ -145,14 +148,16 @@ section .perfil-social {
 
 @keyframes fromBottom {
     from {
-        transfrom: translateX(0)
+        opacity: 0;
+        transform: translateX(0)
     }
 
     to {
-        transform: translateY(-10px)
+        opacity: 1;
+        transform: translateY(-30px)
     }
 }
 
 main section {
-    animation: fromBottom .7s .3s backwards;
+    animation: fromBottom .9s .3s both;
 }
