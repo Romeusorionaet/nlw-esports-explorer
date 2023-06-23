@@ -14,6 +14,7 @@ body {
 body * {
     font-family: 'inter', sans-serif;
     line-height: 160%;
+    max-width: 100%;
 }
 
 header {
@@ -45,7 +46,9 @@ main {
     width: 540px;
     margin: 32px auto;
     margin-top: 24px;
+
     display: grid;
+    justify-items: center;
     gap: 24px;
 }
 
@@ -54,6 +57,7 @@ section {
     background-image: linear-gradient(90deg, rgb(124, 10, 255) 0%, rgb(34, 152, 199) 50%, rgb(54, 126, 44) 100%);
     padding-top: 4px;
     border-radius: 10px;
+    text-align: center;
 }
 
 section .movie-list img {
@@ -74,6 +78,16 @@ section div {
     border-radius: 8px;
 }
 
+section .social li {
+    width: 50px;
+}
+
+section .social li img {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+
 section h2 {
     letter-spacing: -0.20px;
 }
@@ -88,6 +102,7 @@ section ul {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 16px;
 }
 
